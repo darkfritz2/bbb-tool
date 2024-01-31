@@ -55,12 +55,21 @@ These instructions assume your Sakai server is installed at /opt/tomcat.
   2.1. Download the tool source code
   ```
     cd ~/YOUR-SAKAI-SRC         
-    git clone git://github.com/sakaicontrib/bbb-tool.git
+    git clone https://github.com/sakaicontrib/bbb-tool.git
   ```
 
   2.2. Compile & deploy to Tomcat
+```
+cd bbb-tool
+```
+Modify pom.xml between <parent> </parent> the version of sakai installed.
+For example:
+```
+<version>23.0</version>
+```
+for sakai version 23.0
+then run:
   ```
-    cd bbb-tool
     mvn -Dmaven.tomcat.home={tomcat_folder} clean install sakai:deploy
   ```
 
