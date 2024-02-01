@@ -72,9 +72,10 @@ Modify pom.xml with sakai version you have installed
     </parent>
 ```
 Run:
-    ```
+
+```
     mvn -Dmaven.tomcat.home={tomcat_folder} clean install sakai:deploy
-  ```
+```
 
   2.3. Add/review the following entries to the end of your sakai.properties file placed in the /opt/tomcat/sakai/ directory
   ```
